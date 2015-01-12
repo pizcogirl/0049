@@ -36,7 +36,7 @@ public class Test
     }
     
     /**
-     * Suma todos los numeros entre 0 y 10, ambos incluidos
+     * Suma todos los numeros entre 0 y 10, ambos incluidos.
      */
     public void sumValues()
     {
@@ -50,5 +50,22 @@ public class Test
             index++;
         }
         System.out.println("La suma de los numeros entre 0 y 10 es " + value);
+    }
+    
+    /**
+     * Suma todos los valores entre dos numeros introducidos como parametros.
+     */
+    public void sumValuesInterval(int a, int b)
+    {
+        // Inicializamos dos variables locales, una para el contador y otra para acumular la suma. La suma empieza en a
+        int index = 0;
+        int value = 0;
+        while ((index + a) <= b)
+        {
+            // En cada iteracion sumamos el valor del indice
+            value = (index + a) + value;
+            index++;
+        }
+        System.out.println("La suma de los numeros entre " + a + " y " + b + " es " + value);
     }
 }
