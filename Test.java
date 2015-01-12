@@ -23,13 +23,32 @@ public class Test
     {
         int number = 5;
         int index = 0;
+        // Mientras el resultado sea menor que 95, se ejecuta el bucle
         while ((number*index)< 95)
         {
+            // Solo se imprime si el resultado es mayor que 10
             if (number * index > 10)
             {
                 System.out.println (number + " * " + index + " = " + (number*index));
             }
             index++;
         }
+    }
+    
+    /**
+     * Suma todos los numeros entre 0 y 10, ambos incluidos
+     */
+    public void sumValues()
+    {
+        // Inicializamos dos variables locales, una para el contador y otra para acumular la suma
+        int index = 0;
+        int value = 0;
+        while (index <= 10)
+        {
+            // En cada iteracion sumamos el valor del indice
+            value = index + value;
+            index++;
+        }
+        System.out.println("La suma de los numeros entre 0 y 10 es " + value);
     }
 }
