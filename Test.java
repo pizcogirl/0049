@@ -8,7 +8,6 @@
 public class Test
 {
 
-
     /**
      * Constructor for objects of class Test
      */
@@ -34,7 +33,7 @@ public class Test
             index++;
         }
     }
-    
+
     /**
      * Suma todos los numeros entre 0 y 10, ambos incluidos.
      */
@@ -51,7 +50,7 @@ public class Test
         }
         System.out.println("La suma de los numeros entre 0 y 10 es " + value);
     }
-    
+
     /**
      * Suma todos los valores entre dos numeros introducidos como parametros.
      */
@@ -68,4 +67,26 @@ public class Test
         }
         System.out.println("La suma de los numeros entre " + a + " y " + b + " es " + value);
     }
+
+    /**
+     * Comprueba si el numero introducido es primo
+     */
+    public boolean isPrime(int n)
+    {
+        // Creamos un boolean para recoger si es primo o no, y un contador para el bucle.
+        // Inicializamos el bucle en 2 porque en este caso no tiene sentido inicializar en 0
+        boolean isPrime = true;
+        int index = 2;
+        while (isPrime && (index < n))
+        {
+            // Si alguna division da como resto 0, ya sabemos que no es primo
+            if ((n%index) == 0)
+            {
+                isPrime = false;
+            }
+            index++;
+        }
+        return (isPrime);
+    }
+
 }
